@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user-service
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8888
+    vault:
+      host: vault
+      port: 8200
+      scheme: http
+      authentication: token
+      token: root
